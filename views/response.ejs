@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Send Response</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+    }
+    
+    .container {
+        width: 50%;
+        margin: 50px auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    h1 {
+        text-align: center;
+    }
+    
+    .form-group {
+        margin-bottom: 20px;
+    }
+    
+    label {
+        display: block;
+        margin-bottom: 5px;
+    }
+    
+    input[type="email"],
+    textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    
+    button {
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    
+    button:hover {
+        background-color: #0056b3;
+    }
+    a{
+        text-decoration: none;
+        color: inherit;
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Send Response</h1>
+        <form action="/response/send" method="post">
+            <div class="form-group">
+                <label for="senderEmail">Your Email:</label>
+                <input type="email" id="senderEmail" name="senderEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="senderPassword">Your Password:</label>
+                <input type="password" id="senderPassword" name="senderPassword" required>
+                </div>
+            <div class="form-group">
+                <label for="recipientEmail">Recipient Email:</label>
+                <input type="email" id="recipientEmail" name="recipientEmail" required>
+            </div>
+            <div class="form-group">
+                <label for="response">Response:</label>
+                <textarea id="response" name="response" rows="5" required></textarea>
+            </div>
+            <button type="submit">Send Response</button>
+        </form>
+    </div>
+</body>
+</html>
